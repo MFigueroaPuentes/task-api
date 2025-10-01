@@ -20,3 +20,22 @@ curl -X POST http://localhost:3000/tasks   -H "Content-Type: application/json"  
 curl -X POST http://localhost:3000/tasks   -H "Content-Type: application/json"   -d '{"title":""}'
 ```
 
+
+**Prueba 1 PATCH**: 
+```bash
+curl -X PATCH http://localhost:3000/tasks/{id}   -H "Content-Type: application/json"   -d '{"title":"Primera tarea actualizada"}'
+```
+
+**Prueba error PATCH**: 
+```bash
+curl -X PATCH http://localhost:3000/tasks/{id}   -H "Content-Type: application/json"   -d '{"title":""}'
+```
+
+**Prueba 1 DELETE**: 
+```bash
+curl -X DELETE http://localhost:3000/tasks/{id}   -H "Content-Type: application/json" 
+```
+**Prueba error DELETE**: 
+```bash
+curl -X DELETE http://localhost:3000/tasks/   -H "Content-Type: application/json" 
+```
